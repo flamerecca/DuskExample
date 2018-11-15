@@ -6,21 +6,19 @@ use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class ExampleTest extends DuskTestCase
+class AssertTitleContainsTest extends DuskTestCase
 {
     /**
-     * A basic browser test example.
      *
      * @return void
      * @throws \Exception
      * @throws \Throwable
      */
-    public function testBasicExample()
+    public function testAssertTitleContains()
     {
-
         $this->browse(function (Browser $browser) {
             $browser->visit('/welcome')
-                    ->assertSee('Laravel');
+                    ->assertTitleContains('rave');
         });
     }
 }
