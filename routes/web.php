@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::get('/welcome', function () {
     return view('welcome');
 })->name('test.welcome');
+
+Route::get('/test/cookie', 'CookieController@cookie')->name('test.cookie');
