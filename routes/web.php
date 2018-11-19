@@ -20,3 +20,4 @@ Route::get('/welcome', function () {
 })->name('test.welcome');
 
 Route::get('/test/cookie', 'CookieController@cookie')->name('test.cookie');
+Route::get('/test/input', 'InputController@input')->name('test.input');
