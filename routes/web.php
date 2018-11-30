@@ -21,3 +21,5 @@ Route::get('/welcome', function () {
 
 Route::get('/test/cookie', 'CookieController@cookie')->name('test.cookie');
 Route::get('/test/input', 'InputController@input')->name('test.input');
+Route::get('/test/checkbox', 'CheckboxController@checkbox')->name('test.checkbox');
+Route::get('/test/radio', 'RadioController@radio')->name('test.radio');

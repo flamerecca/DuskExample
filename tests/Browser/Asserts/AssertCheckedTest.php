@@ -6,7 +6,7 @@ use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class AssertSeeLinkTest extends DuskTestCase
+class AssertCheckedTest extends DuskTestCase
 {
     /**
      *
@@ -14,11 +14,11 @@ class AssertSeeLinkTest extends DuskTestCase
      * @throws \Exception
      * @throws \Throwable
      */
-    public function testExample()
+    public function testAssertChecked()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('/')
-                    ->assertSeeLink('GitHub');
+            $browser->visit('/test/checkbox')
+                    ->assertChecked('test_checkbox');
         });
     }
 }

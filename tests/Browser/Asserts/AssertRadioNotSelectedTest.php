@@ -6,7 +6,7 @@ use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class AssertSeeLinkTest extends DuskTestCase
+class AssertRadioNotSelectedTest extends DuskTestCase
 {
     /**
      *
@@ -17,8 +17,8 @@ class AssertSeeLinkTest extends DuskTestCase
     public function testExample()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('/')
-                    ->assertSeeLink('GitHub');
+            $browser->visit('/test/radio')
+                    ->assertRadioNotSelected('test_radio', 'should_not_be_checked');
         });
     }
 }
